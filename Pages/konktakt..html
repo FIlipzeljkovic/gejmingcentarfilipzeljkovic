@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+   
+</head>
+<body>
+    <style>
+    * {
+        margin: 10px;
+        padding: 0;
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+    }
+
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            place-items: center;
+            color: white;
+            background-color: #476AB4;
+
+        }
+
+        .contact-container{
+            max-width: 960px;
+            margin: auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            background: #363953;
+            box-shadow: 0 0 1rem hsla(0 0 0 / 16%);
+            border-radius: 0.5rem;
+            overflow: hidden;
+
+
+        }
+        .form-container {
+            padding: 20px;
+
+        }
+        .form-container h3{
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+
+        }
+
+        .contact-form{
+            display: grid;
+            row-gap: 1rem;
+        }
+        
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: #6B2EDE;
+            padding: 10px;
+            font-size: 0.9rem ;
+            color: azure;
+            border-radius: 0.4rem;
+
+
+        }
+
+        .contact-form .send-button{
+            border: none;
+            outline: none;
+            background: slategray;
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .contact-form .send-button:hover{
+        background: turquoise;    
+         transition: 0.5 all linear;
+              
+        }
+
+        .map iframe{
+            width: 100%;
+            height: 100%;
+        } 
+        @media (max-width:900px){
+    .contact-container{
+        margin: 0 auto;
+        width: 90%;
+        margin-top: 100px;
+    }
+}
+
+@media (max-width:680px){
+    .contact-container{
+        grid-template-columns: 1fr;
+    }
+}
+        
+
+    .logo-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .logo.logo {
+    width: 160px;
+    height: 100px;
+    background-image: url('../img/joystick.png');
+    background-size: cover;
+    position: absolute;
+    animation: moveLogoAcrossScreen 10s linear infinite;
+  }
+  
+  @keyframes moveLogoAcrossScreen {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: calc(100% - 100px);
+    }
+}
+       
+    </style>
+    <section>
+        <div class="contact-container">
+            <div class="form-container">
+                <h3>Pisite nam</h3>
+                <form action="" class="contact-form">
+                    <input type="text" placeholder="Vase Ime"  required>
+                    <input type="email"  name=""  id=""  placeholder="Vas email..." required>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Pisite nam.." required></textarea>
+                    <input type="submit"  value="Posalji" class="send-button">
+                </form>
+            </div>
+
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44879.01702206255!2d19.319821989582366!3d45.32986304416918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b64aa6becd4fb%3A0x940add78852269ff!2sObrovac!5e0!3m2!1sen!2srs!4v1702671005122!5m2!1sen!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    
+    <div class="logo-container">
+        <div class="logo"> 
+    </div>
+
+    
+</body>
+</html>
